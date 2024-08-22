@@ -1,0 +1,8 @@
+{
+    "baseUrl": "http://localhost:3000",
+    "video": false,
+    "screenshotsFolder": "cypress/screenshots",
+    "videosFolder": "cypress/videos",
+    "integrationFolder": "cypress/integration"
+  }
+  

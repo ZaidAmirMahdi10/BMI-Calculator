@@ -1,0 +1,1042 @@
+10:51:20 (48564) DEBUG ConfigReader Loading config from stryker.conf.js
+10:51:20 (48564) DEBUG ConfigReader Loaded config: {
+  "packageManager": "yarn",
+  "reporters": [
+    "progress",
+    "clear-text",
+    "html"
+  ],
+  "testRunner": "jest",
+  "coverageAnalysis": "perTest",
+  "mutate": [
+    "src/**/*.js",
+    "!src/App.test.js"
+  ],
+  "jest": {
+    "projectType": "custom",
+    "config": {
+      "transformIgnorePatterns": [
+        "/node_modules/",
+        "\\.pnp\\.[^\\/]+$",
+        "\\.svg$",
+        "\\.css$"
+      ]
+    },
+    "enableFindRelatedTests": true
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "allowConsoleColors": true,
+  "checkers": [],
+  "checkerNodeArgs": [],
+  "commandRunner": {
+    "command": "npm test"
+  },
+  "clearTextReporter": {
+    "allowColor": true,
+    "allowEmojis": false,
+    "logTests": true,
+    "maxTestsToLog": 3,
+    "reportTests": true,
+    "reportMutants": true,
+    "reportScoreTable": true
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "dryRunOnly": false,
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "ignorePatterns": [],
+  "ignoreStatic": false,
+  "incremental": false,
+  "incrementalFile": "reports/stryker-incremental.json",
+  "force": false,
+  "inPlace": false,
+  "maxConcurrentTestRunners": 9007199254740991,
+  "maxTestRunnerReuse": 0,
+  "mutator": {
+    "plugins": null,
+    "excludedMutations": []
+  },
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "appendPlugins": [],
+  "htmlReporter": {
+    "fileName": "reports/mutation/mutation.html"
+  },
+  "jsonReporter": {
+    "fileName": "reports/mutation/mutation.json"
+  },
+  "disableTypeChecks": true,
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "cleanTempDir": true,
+  "testRunnerNodeArgs": [],
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "dryRunTimeoutMinutes": 5,
+  "tsconfigFile": "tsconfig.json",
+  "warnings": true,
+  "disableBail": false,
+  "allowEmpty": false,
+  "ignorers": []
+}
+10:51:20 (48564) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator
+10:51:20 (48564) DEBUG PluginLoader Loading plugin "@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+10:51:20 (48564) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:20 (48564) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:20 (48564) DEBUG MetaSchemaBuilder Contributing 1 schemas from plugins to options validation.
+10:51:20 (48564) INFO ProjectReader Found 7 of 25 file(s) to be mutated.
+10:51:20 (48564) DEBUG ProjectReader All input files: [
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.babelrc",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.gitignore",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/README.md",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/babel.config.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/package.json",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/favicon.ico",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/index.html",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/logo192.png",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/logo512.png",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/manifest.json",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/robots.txt",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/App.css",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/App.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/App.test.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/BMICalculator.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/WeightHelper.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/WeightHelper.test.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/__snapshots__/App.test.js.snap",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/index.css",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/index.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/logo.svg",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/reportWebVitals.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/setupTests.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/stryker.conf.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/yarn.lock"
+]
+10:51:20 (48564) DEBUG ProjectReader Files to mutate: [
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/App.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/BMICalculator.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/WeightHelper.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/WeightHelper.test.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/index.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/reportWebVitals.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/setupTests.js"
+]
+10:51:20 (48564) DEBUG TemporaryDirectory Using temp directory "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp"
+10:51:20 (48564) DEBUG Instrumenter Instrumenting 7 source files with mutants
+10:51:20 (48564) DEBUG Instrumenter Instrumented src/App.js (1 mutant(s))
+10:51:20 (48564) DEBUG Instrumenter Instrumented src/BMICalculator.js (25 mutant(s))
+10:51:20 (48564) DEBUG Instrumenter Instrumented src/WeightHelper.js (45 mutant(s))
+10:51:20 (48564) DEBUG Instrumenter Instrumented src/WeightHelper.test.js (65 mutant(s))
+10:51:20 (48564) DEBUG Instrumenter Instrumented src/index.js (1 mutant(s))
+10:51:20 (48564) DEBUG Instrumenter Instrumented src/reportWebVitals.js (7 mutant(s))
+10:51:20 (48564) DEBUG Instrumenter Instrumented src/setupTests.js (0 mutant(s))
+10:51:20 (48564) INFO Instrumenter Instrumented 7 source file(s) with 144 mutant(s)
+10:51:20 (48564) INFO ConcurrencyTokenProvider Creating 13 test runner process(es).
+10:51:20 (48564) DEBUG ChildProcessProxy Started CheckerWorker in worker process 0 with pid 48565 
+10:51:20 (48565) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:20 (48565) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:20 (48564) DEBUG Sandbox Creating a sandbox for files in /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:20 (48564) DEBUG Sandbox Start symlink node_modules
+10:51:20 (48564) DEBUG Sandbox Create symlink from /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/node_modules
+10:51:20 (48564) DEBUG BroadcastReporter Broadcasting to reporters ["progress","clear-text","html"]
+10:51:20 (48564) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 0 with pid 48571 
+10:51:20 (48564) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 1 with pid 48572 
+10:51:20 (48571) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:20 (48571) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:20 (48572) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:20 (48572) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:20 (48572) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:20 (48571) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:20 (48572) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+10:51:20 (48571) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+10:51:20 (48572) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:51:20 (48571) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:51:20 (48572) DEBUG CustomJestConfigLoader Read config from "package.json" (used native `readInitialOptions` from jest-config).
+10:51:20 (48572) DEBUG JestTestRunner Merging file-based config {
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884"
+}
+      with custom config {
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    "\\.svg$",
+    "\\.css$"
+  ]
+}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:51:20 (48571) DEBUG CustomJestConfigLoader Read config from "package.json" (used native `readInitialOptions` from jest-config).
+10:51:20 (48571) DEBUG JestTestRunner Merging file-based config {
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884"
+}
+      with custom config {
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    "\\.svg$",
+    "\\.css$"
+  ]
+}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:51:20 (48564) INFO DryRunExecutor Starting initial test run (jest test runner with "perTest" coverage analysis). This may take a while.
+10:51:20 (48564) DEBUG DryRunExecutor Using timeout of 300000 ms.
+10:51:20 (48564) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+10:51:20 (48564) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 2 with pid 48575 
+10:51:20 (48564) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 3 with pid 48576 
+10:51:20 (48572) TRACE JestTestRunner Invoking Jest with config {"fileNamesUnderTest":["/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/App.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/BMICalculator.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/WeightHelper.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/WeightHelper.test.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/index.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/reportWebVitals.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/setupTests.js"],"jestConfig":{"rootDir":"/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884","transformIgnorePatterns":["/node_modules/","\\.pnp\\.[^\\/]+$","\\.svg$","\\.css$"],"collectCoverage":false,"verbose":false,"notify":false,"bail":false,"reporters":[],"globals":{"__strykerGlobalNamespace__":"__stryker__"},"testEnvironment":"/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/jest-runner/dist/src/jest-plugins/jest-environment-generic.cjs"},"testLocationInResults":true}
+10:51:20 (48564) TRACE ChildProcessProxy watchman warning:  Recrawled this watch 71 times, most recently because:
+MustScanSubDirs UserDroppedTo resolve, please review the information on
+https://facebook.github.io/watchman/docs/troubleshooting.html#recrawl
+To clear this warning, run:
+`watchman watch-del '/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator' ; watchman watch-project '/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator'`
+
+
+10:51:20 (48575) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:20 (48575) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:20 (48576) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:20 (48576) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:20 (48576) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:20 (48575) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:20 (48576) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+10:51:20 (48575) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+10:51:20 (48576) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:51:20 (48575) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:51:20 (48576) DEBUG CustomJestConfigLoader Read config from "package.json" (used native `readInitialOptions` from jest-config).
+10:51:20 (48576) DEBUG JestTestRunner Merging file-based config {
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884"
+}
+      with custom config {
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    "\\.svg$",
+    "\\.css$"
+  ]
+}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:51:20 (48564) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 4 with pid 48605 
+10:51:20 (48575) DEBUG CustomJestConfigLoader Read config from "package.json" (used native `readInitialOptions` from jest-config).
+10:51:20 (48575) DEBUG JestTestRunner Merging file-based config {
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884"
+}
+      with custom config {
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    "\\.svg$",
+    "\\.css$"
+  ]
+}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:51:20 (48564) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 5 with pid 48606 
+10:51:20 (48606) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:20 (48606) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:20 (48605) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:20 (48605) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:20 (48606) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:20 (48605) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:20 (48606) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+10:51:20 (48605) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+10:51:20 (48606) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:51:20 (48605) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:51:20 (48606) DEBUG CustomJestConfigLoader Read config from "package.json" (used native `readInitialOptions` from jest-config).
+10:51:20 (48606) DEBUG JestTestRunner Merging file-based config {
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884"
+}
+      with custom config {
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    "\\.svg$",
+    "\\.css$"
+  ]
+}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:51:20 (48564) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 6 with pid 48607 
+10:51:20 (48605) DEBUG CustomJestConfigLoader Read config from "package.json" (used native `readInitialOptions` from jest-config).
+10:51:20 (48605) DEBUG JestTestRunner Merging file-based config {
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884"
+}
+      with custom config {
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    "\\.svg$",
+    "\\.css$"
+  ]
+}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:51:20 (48564) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 7 with pid 48608 
+10:51:21 (48607) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:21 (48607) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:21 (48608) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:51:21 (48608) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:51:21 (48564) ERROR DryRunExecutor One or more tests resulted in an error:
+	undefinedUnexpected token '<' Jest encountered an unexpected token
+
+Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+By default "node_modules" folder is ignored by transformers.
+
+Here's what you can do:
+ • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+ • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+ • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+ • If you need a custom transformation specify a "transform" option in your config.
+ • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+You'll find more details and examples of these config options in the docs:
+https://jestjs.io/docs/configuration
+For information about custom transformations, see:
+https://jestjs.io/docs/code-transformation
+
+Details:
+
+/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/logo.svg:1
+({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,jest){<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3"><g fill="#61DAFB"><path d="M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z"/><circle cx="420.9" cy="296.5" r="45.7"/><path d="M520.5 78.1z"/></g></svg>
+                                                                                  ^
+
+SyntaxError: Unexpected token '<'
+    at new Script (node:vm:116:7)
+    at Runtime.createScriptFromCode (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1505:14)
+    at Runtime._execModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1399:25)
+    at Runtime._loadModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:882:12)
+    at Runtime.requireModuleOrMock (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1048:21)
+    at Object.require (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/App.js:49:1)
+    at Runtime._execModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:882:12)
+    at Runtime.requireModuleOrMock (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1048:21)
+    at Object.require (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884/src/App.test.js:6:1)
+    at Runtime._execModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1439:24)
+    at Runtime._loadModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:1022:12)
+    at Runtime.requireModule (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runtime/build/index.js:882:12)
+    at jestAdapter (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:77:13)
+    at runTestInternal (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/jest-config/node_modules/jest-runner/build/runTest.js:444:34)
+10:51:21 (48564) DEBUG Stryker Not removing the temp dir because an error occurred
+10:51:21 (48564) ERROR Stryker Unexpected error occurred while running Stryker Error: Something went wrong in the initial test run
+    at DryRunExecutor.validateResultCompleted (file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/process/3-dry-run-executor.js:75:15)
+    at DryRunExecutor.executeDryRun (file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/process/3-dry-run-executor.js:95:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async WorkItem.execute (file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/concurrent/pool.js:32:28)
+    at async file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/concurrent/pool.js:69:13
+10:51:21 (48564) INFO Stryker This might be a known problem with a solution documented in our troubleshooting guide.
+10:51:21 (48564) INFO Stryker You can find it at https://stryker-mutator.io/docs/stryker-js/troubleshooting/
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48572
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48571
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48575
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48576
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48605
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48606
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48572
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48571
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48575
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48576
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48605
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48606
+10:51:21 (48607) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:21 (48608) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884
+10:51:21 (48607) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+10:51:21 (48608) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+10:51:21 (48608) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:51:21 (48607) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48607
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48608
+10:51:21 (48607) DEBUG CustomJestConfigLoader Read config from "package.json" (used native `readInitialOptions` from jest-config).
+10:51:21 (48607) DEBUG JestTestRunner Merging file-based config {
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884"
+}
+      with custom config {
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    "\\.svg$",
+    "\\.css$"
+  ]
+}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:51:21 (48608) DEBUG CustomJestConfigLoader Read config from "package.json" (used native `readInitialOptions` from jest-config).
+10:51:21 (48608) DEBUG JestTestRunner Merging file-based config {
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox1784884"
+}
+      with custom config {
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "\\.pnp\\.[^\\/]+$",
+    "\\.svg$",
+    "\\.css$"
+  ]
+}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48607
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48608
+10:51:21 (48564) DEBUG ChildProcessProxy Disposing of worker process 48565
+10:51:21 (48564) DEBUG ChildProcessProxy Kill 48565
+11:55:20 (64231) DEBUG ConfigReader Loading config from stryker.conf.js
+11:55:20 (64231) DEBUG ConfigReader Loaded config: {
+  "packageManager": "yarn",
+  "reporters": [
+    "progress",
+    "clear-text",
+    "html"
+  ],
+  "testRunner": "jest",
+  "coverageAnalysis": "perTest",
+  "mutate": [
+    "src/**/*.js",
+    "!src/App.test.js"
+  ],
+  "jest": {
+    "projectType": "custom",
+    "configFile": "jest.config.js",
+    "enableFindRelatedTests": true
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "allowConsoleColors": true,
+  "checkers": [],
+  "checkerNodeArgs": [],
+  "commandRunner": {
+    "command": "npm test"
+  },
+  "clearTextReporter": {
+    "allowColor": true,
+    "allowEmojis": false,
+    "logTests": true,
+    "maxTestsToLog": 3,
+    "reportTests": true,
+    "reportMutants": true,
+    "reportScoreTable": true
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "dryRunOnly": false,
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "ignorePatterns": [],
+  "ignoreStatic": false,
+  "incremental": false,
+  "incrementalFile": "reports/stryker-incremental.json",
+  "force": false,
+  "inPlace": false,
+  "maxConcurrentTestRunners": 9007199254740991,
+  "maxTestRunnerReuse": 0,
+  "mutator": {
+    "plugins": null,
+    "excludedMutations": []
+  },
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "appendPlugins": [],
+  "htmlReporter": {
+    "fileName": "reports/mutation/mutation.html"
+  },
+  "jsonReporter": {
+    "fileName": "reports/mutation/mutation.json"
+  },
+  "disableTypeChecks": true,
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "cleanTempDir": true,
+  "testRunnerNodeArgs": [],
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "dryRunTimeoutMinutes": 5,
+  "tsconfigFile": "tsconfig.json",
+  "warnings": true,
+  "disableBail": false,
+  "allowEmpty": false,
+  "ignorers": []
+}
+11:55:20 (64231) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator
+11:55:20 (64231) DEBUG PluginLoader Loading plugin "@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:55:20 (64231) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:20 (64231) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:20 (64231) DEBUG MetaSchemaBuilder Contributing 1 schemas from plugins to options validation.
+11:55:20 (64231) INFO ProjectReader Found 7 of 29 file(s) to be mutated.
+11:55:20 (64231) DEBUG ProjectReader All input files: [
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.DS_Store",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.babelrc",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.gitignore",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/README.md",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/__mocks__/fileMock.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/__mocks__/styleMock.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/babel.config.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/jest.config.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/package.json",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/favicon.ico",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/index.html",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/logo192.png",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/logo512.png",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/manifest.json",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/public/robots.txt",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/App.css",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/App.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/App.test.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/BMICalculator.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/WeightHelper.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/WeightHelper.test.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/__snapshots__/App.test.js.snap",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/index.css",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/index.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/logo.svg",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/reportWebVitals.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/setupTests.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/stryker.conf.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/yarn.lock"
+]
+11:55:20 (64231) DEBUG ProjectReader Files to mutate: [
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/App.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/BMICalculator.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/WeightHelper.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/WeightHelper.test.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/index.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/reportWebVitals.js",
+  "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/src/setupTests.js"
+]
+11:55:20 (64231) DEBUG TemporaryDirectory Using temp directory "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp"
+11:55:20 (64231) DEBUG Instrumenter Instrumenting 7 source files with mutants
+11:55:21 (64231) DEBUG Instrumenter Instrumented src/App.js (1 mutant(s))
+11:55:21 (64231) DEBUG Instrumenter Instrumented src/BMICalculator.js (25 mutant(s))
+11:55:21 (64231) DEBUG Instrumenter Instrumented src/WeightHelper.js (45 mutant(s))
+11:55:21 (64231) DEBUG Instrumenter Instrumented src/WeightHelper.test.js (65 mutant(s))
+11:55:21 (64231) DEBUG Instrumenter Instrumented src/index.js (1 mutant(s))
+11:55:21 (64231) DEBUG Instrumenter Instrumented src/reportWebVitals.js (7 mutant(s))
+11:55:21 (64231) DEBUG Instrumenter Instrumented src/setupTests.js (0 mutant(s))
+11:55:21 (64231) INFO Instrumenter Instrumented 7 source file(s) with 144 mutant(s)
+11:55:21 (64231) INFO ConcurrencyTokenProvider Creating 13 test runner process(es).
+11:55:21 (64231) DEBUG ChildProcessProxy Started CheckerWorker in worker process 0 with pid 64233 
+11:55:21 (64233) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64233) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64231) DEBUG Sandbox Creating a sandbox for files in /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64231) DEBUG Sandbox Start symlink node_modules
+11:55:21 (64231) DEBUG Sandbox Create symlink from /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/node_modules
+11:55:21 (64231) DEBUG BroadcastReporter Broadcasting to reporters ["progress","clear-text","html"]
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 0 with pid 64234 
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 1 with pid 64235 
+11:55:21 (64234) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64234) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64235) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64235) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64235) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64234) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64235) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:21 (64234) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:21 (64234) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:21 (64235) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:21 (64234) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:21 (64235) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:21 (64235) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:21 (64234) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:21 (64231) INFO DryRunExecutor Starting initial test run (jest test runner with "perTest" coverage analysis). This may take a while.
+11:55:21 (64231) DEBUG DryRunExecutor Using timeout of 300000 ms.
+11:55:21 (64231) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 2 with pid 64238 
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 3 with pid 64239 
+11:55:21 (64234) TRACE JestTestRunner Invoking Jest with config {"fileNamesUnderTest":["/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/App.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/BMICalculator.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/WeightHelper.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/WeightHelper.test.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/index.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/reportWebVitals.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/setupTests.js"],"jestConfig":{"transform":{"^.+\\.jsx?$":"babel-jest"},"moduleNameMapper":{"\\.css$":"<rootDir>/__mocks__/styleMock.js","\\.svg$":"<rootDir>/__mocks__/fileMock.js"},"testEnvironment":"/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/jest-runner/dist/src/jest-plugins/jest-environment-generic.cjs","setupFilesAfterEnv":["@testing-library/jest-dom/extend-expect"],"rootDir":"/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060","collectCoverage":false,"verbose":false,"notify":false,"bail":false,"reporters":[],"globals":{"__strykerGlobalNamespace__":"__stryker__"}},"testLocationInResults":true}
+11:55:21 (64231) DEBUG ChildProcessProxy Disposing of worker process 64234
+11:55:21 (64231) DEBUG ChildProcessProxy Kill 64234
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 4 with pid 64258 
+11:55:21 (64239) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64239) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64238) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64238) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64258) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64258) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64239) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64238) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64239) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:21 (64238) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:21 (64239) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:21 (64238) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:21 (64239) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:21 (64239) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 5 with pid 64259 
+11:55:21 (64238) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:21 (64238) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 6 with pid 64260 
+11:55:21 (64258) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64258) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:21 (64258) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:21 (64258) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:21 (64258) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:21 (64231) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+11:55:21 (64258) TRACE JestTestRunner Invoking Jest with config {"fileNamesUnderTest":["/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/App.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/BMICalculator.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/WeightHelper.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/WeightHelper.test.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/index.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/reportWebVitals.js","/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060/src/setupTests.js"],"jestConfig":{"transform":{"^.+\\.jsx?$":"babel-jest"},"moduleNameMapper":{"\\.css$":"<rootDir>/__mocks__/styleMock.js","\\.svg$":"<rootDir>/__mocks__/fileMock.js"},"testEnvironment":"/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/jest-runner/dist/src/jest-plugins/jest-environment-generic.cjs","setupFilesAfterEnv":["@testing-library/jest-dom/extend-expect"],"rootDir":"/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060","collectCoverage":false,"verbose":false,"notify":false,"bail":false,"reporters":[],"globals":{"__strykerGlobalNamespace__":"__stryker__"}},"testLocationInResults":true}
+11:55:21 (64231) DEBUG ChildProcessProxy Disposing of worker process 64258
+11:55:21 (64231) DEBUG ChildProcessProxy Kill 64258
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 7 with pid 64279 
+11:55:21 (64259) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64260) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64260) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64259) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64260) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64259) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64260) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:21 (64259) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:21 (64279) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:21 (64279) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:21 (64260) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:21 (64259) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:21 (64260) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:21 (64260) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 8 with pid 64280 
+11:55:21 (64259) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:21 (64259) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 9 with pid 64281 
+11:55:21 (64279) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:21 (64279) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:21 (64279) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:21 (64279) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:21 (64279) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:21 (64231) DEBUG ChildProcessProxy Disposing of worker process 64279
+11:55:21 (64231) DEBUG ChildProcessProxy Kill 64279
+11:55:21 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 10 with pid 64300 
+11:55:22 (64280) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:22 (64280) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:22 (64281) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:22 (64281) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:22 (64280) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:22 (64281) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:22 (64281) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:22 (64280) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:22 (64281) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:22 (64280) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:22 (64280) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:22 (64280) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:22 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 11 with pid 64301 
+11:55:22 (64281) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:22 (64281) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:22 (64231) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 12 with pid 64302 
+11:55:22 (64300) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:22 (64300) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:22 (64300) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:22 (64300) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:22 (64300) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:22 (64300) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:22 (64300) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:22 (64231) ERROR DryRunExecutor One or more tests resulted in an error:
+	Test runner crashed. Tried twice to restart it without any luck. Last time the error message was: Error: : ● Validation Error:
+
+  Module @testing-library/jest-dom/extend-expect in the setupFilesAfterEnv option was not found.
+         <rootDir> is: /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+● Validation Error:
+
+  Module @testing-library/jest-dom/extend-expect in the setupFilesAfterEnv option was not found.
+         <rootDir> is: /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+Error: : ● Validation Error:
+
+  Module @testing-library/jest-dom/extend-expect in the setupFilesAfterEnv option was not found.
+         <rootDir> is: /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+● Validation Error:
+
+  Module @testing-library/jest-dom/extend-expect in the setupFilesAfterEnv option was not found.
+         <rootDir> is: /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+
+  Configuration Documentation:
+  https://jestjs.io/docs/configuration
+
+    at ChildProcess.<anonymous> (file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/child-proxy/child-process-proxy.js:122:72)
+    at ChildProcess.emit (node:events:519:28)
+    at emit (node:internal/child_process:951:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+11:55:22 (64231) DEBUG Stryker Not removing the temp dir because an error occurred
+11:55:22 (64231) ERROR Stryker Unexpected error occurred while running Stryker Error: Something went wrong in the initial test run
+    at DryRunExecutor.validateResultCompleted (file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/process/3-dry-run-executor.js:75:15)
+    at DryRunExecutor.executeDryRun (file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/process/3-dry-run-executor.js:95:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async WorkItem.execute (file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/concurrent/pool.js:32:28)
+    at async file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/concurrent/pool.js:69:13
+11:55:22 (64231) INFO Stryker This might be a known problem with a solution documented in our troubleshooting guide.
+11:55:22 (64231) INFO Stryker You can find it at https://stryker-mutator.io/docs/stryker-js/troubleshooting/
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64300
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64238
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64235
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64239
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64259
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64280
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64260
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64281
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64300
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64281
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64238
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64235
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64239
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64259
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64280
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64260
+11:55:22 (64301) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:22 (64301) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:22 (64302) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+11:55:22 (64302) DEBUG PluginLoader Loading plugin file:///Users/bat-lab/Desktop/Masters/Courses/Adaptive%20Lean%20Software%20Testing/Assignment-2/bmi-calculator/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+11:55:22 (64302) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:22 (64301) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060
+11:55:22 (64301) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:22 (64302) DEBUG jestTestAdapterFactory Detected Jest version 29.7.0
+11:55:22 (64301) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:22 (64302) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64301
+11:55:22 (64301) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:22 (64301) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64302
+11:55:22 (64302) DEBUG CustomJestConfigLoader Read config from "jest.config.js" (used native `readInitialOptions` from jest-config).
+11:55:22 (64302) DEBUG JestTestRunner Merging file-based config {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.css$": "<rootDir>/__mocks__/styleMock.js",
+    "\\.svg$": "<rootDir>/__mocks__/fileMock.js"
+  },
+  "testEnvironment": "jest-environment-jsdom",
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
+  "rootDir": "/Users/bat-lab/Desktop/Masters/Courses/Adaptive Lean Software Testing/Assignment-2/bmi-calculator/.stryker-tmp/sandbox7711060"
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64301
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64302
+11:55:22 (64231) DEBUG ChildProcessProxy Disposing of worker process 64233
+11:55:22 (64231) DEBUG ChildProcessProxy Kill 64233
