@@ -8,5 +8,14 @@ module.exports = {
     '\\.svg$': '<rootDir>/__mocks__/fileMock.js',  
   },
   testEnvironment: 'jest-environment-jsdom',
-  setupFilesAfterEnv: ["@testing-library/jest-dom"]
+  setupFilesAfterEnv: ["@testing-library/jest-dom"],
+  reporters: [
+    'default',
+    ['jest-junit', {
+      outputDirectory: './test-results',
+      outputName: 'jest-junit.xml',
+    }],
+  ],
+
 };
+

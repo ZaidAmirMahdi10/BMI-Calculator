@@ -1,3 +1,5 @@
+// cypress/integration/bmiCalculator.spec.js
+
 describe('BMI Calculator', () => {
     it('should calculate BMI correctly', () => {
       cy.visit('/');

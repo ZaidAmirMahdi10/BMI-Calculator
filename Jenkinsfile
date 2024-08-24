@@ -1,3 +1,5 @@
+// Jenkinsfile
+
 pipeline {
     agent any
 
@@ -5,7 +7,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clone the repository
-                git 'https://your-repository-url.git'
+                git 'https://github.com/ZaidAmirMahdi10/BMI-Calculator.git'
             }
         }
 
@@ -44,16 +46,7 @@ pipeline {
 
         stage('Run E2E Tests') {
             steps {
-                // Run E2E tests (Assuming you set up Cypress)
                 sh 'yarn run cypress:run'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                // Deploy to your hosting platform (e.g., Netlify, Vercel)
-                // Example: deploy to Netlify
-                sh 'netlify deploy --prod --dir=build'
             }
         }
     }

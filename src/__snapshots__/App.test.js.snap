@@ -8,11 +8,6 @@ exports[`matches snapshot 1`] = `
     <header
       class="App-header"
     >
-      <img
-        alt="logo"
-        class="App-logo"
-        src="logo.svg"
-      />
       <div>
         <h1>
           BMI Calculator
